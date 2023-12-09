@@ -9,22 +9,21 @@ import java.util.List;
 import cl.inacap.productomvcswingapp.model.dto.Producto;
 import cl.inacap.productomvcswingapp.util.BDUtil;
 
-
 public class ProductoDAO {
 	private BDUtil bdUtil = new BDUtil();
 	
 	public boolean save(Producto pr) {
 		boolean resultado;
 		try {
-			System.out.println("Conexi�n a la DB: " + bdUtil.conectar());
+			System.out.println("Conexión a la DB: " + bdUtil.conectar());
 			String sql = "INSERT INTO producto" + "(nombre,precio,stock)" + " VALUES('" + pr.getNombre() + "','" + pr.getPrecio() + "','" + pr.getStock() + "')"; 
 			Statement st = bdUtil.getConexion().createStatement();
 			st.executeUpdate(sql);
 			resultado = true;
-			System.out.println("Ejecuci�n del SQL: " + resultado);
+			System.out.println("Ejecución del SQL: " + resultado);
 		} catch (Exception ex) {
 			resultado = false;
-			System.out.println("Ejecuci�n del SQL: " + resultado);
+			System.out.println("Ejecución del SQL: " + resultado);
 			
 		} finally { 
 			bdUtil.desconectar(); 
@@ -38,14 +37,14 @@ public class ProductoDAO {
 		boolean resultado;
 		try {
 			
-			System.out.println("Conexi�n a la DB: " + bdUtil.conectar());
+			System.out.println("Conexión a la DB: " + bdUtil.conectar());
 		
 			String sql = "SELECT nombre,precio,sotck" + " FROM producto";
 			PreparedStatement st = bdUtil.getConexion().prepareStatement(sql); 
 		
 			ResultSet rs=st.executeQuery();
 			resultado=true;
-			System.out.println("Ejecuci�n del SQL: " + resultado);
+			System.out.println("Ejecución del SQL: " + resultado);
 			while (rs.next()) { 
 				Producto pr = new Producto();
 				pr.setNombre(rs.getString(1));
@@ -57,7 +56,7 @@ public class ProductoDAO {
 			rs.close(); 
 		} catch (Exception ex) {
 			resultado = false;
-			System.out.println("Ejecuci�n del SQL: " + resultado);
+			System.out.println("Ejecución del SQL: " + resultado);
 			productos = null;
 			
 		} finally { 

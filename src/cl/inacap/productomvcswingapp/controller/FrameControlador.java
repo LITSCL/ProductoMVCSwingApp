@@ -12,7 +12,7 @@ public class FrameControlador implements ActionListener {
     private AgregarProductoFrame agregarProductoFrame = new AgregarProductoFrame();
     private MostrarProductoFrame mostrarProductoFrame = new MostrarProductoFrame();
    
-    public void FrameControlador(Frame fr) { //Este método construye al JFrame y añade los listeners de los Menu Componentes.
+    public void FrameControlador(Frame fr) { //Este mÃ©todo construye al JFrame y aÃ±ade los listeners de los Menu Componentes.
     	this.fr = fr;
     	this.fr.mntmAgregarProducto.addActionListener(e -> showFrameAgregarProducto(e));	
     	this.fr.mntmMostrarProductos.addActionListener(e -> showFrameMostrarProductos(e));
