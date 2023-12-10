@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 public class BDUtil {
 	private final String servidor = "localhost"; 
-	private final String baseDeDatos = "dbproductoswingapp"; 
+	private final String baseDeDatos = "dbproductomvcswingapp"; 
 	private final String usuario = "root"; 
 	private final String clave = "root"; 
 	private Connection conexion;
