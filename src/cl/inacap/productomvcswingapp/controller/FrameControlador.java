@@ -6,7 +6,6 @@ import cl.inacap.productomvcswingapp.view.MostrarProductoFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
 public class FrameControlador implements ActionListener {
     private Frame fr = new Frame();
     private AgregarProductoFrame agregarProductoFrame = new AgregarProductoFrame();
@@ -39,5 +38,4 @@ public class FrameControlador implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 	}
-	
 }

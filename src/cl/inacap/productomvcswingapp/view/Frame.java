@@ -61,4 +61,5 @@ public class Frame extends JFrame {
 		desktopPane = new JDesktopPane();
 		contentPane.add(desktopPane, BorderLayout.CENTER);
 	}
+	
 }
